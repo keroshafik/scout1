@@ -1,0 +1,26 @@
+export class Users {
+    constructor(
+      public id: number = 0,
+      public first_name: string = '',
+      public last_name: string,
+      public address: string = '',
+      public governorate_id: Number = 0,
+      public email: string = '',
+      public password: string = '',
+      public fb_account: string = '',
+      public gender_id: number = 0,
+      public birthdate: Date ,
+      public phone_number: string = '',
+      public national_id: Number =0,
+      public edu_level_id: number=0,
+      public university_school: string="",
+      public specialization: string="",
+      public scout_group_id: Number,
+      public scout_association_id: Number,
+      public team_id:Number,
+      public is_admin:boolean,
+      public cv:Blob,
+      public picture:Blob,
+      public profile_picture:Blob,
+    ) {}
+  }
