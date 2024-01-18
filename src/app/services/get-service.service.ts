@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class GetServiceService {
-  private Url = 'https://localhost:7080/';
+  private Url = 'http://localhost:3000/';
 
   constructor(private http: HttpClient) { }
-  
-  getAllUsers(): Observable<Users[]> {
-    return this.http.get<Users[]>(this.Url);
+
+  getAllUsers( url:string): Observable<any[]> {
+    return this.http.get<any[]>(`${this.Url}${url}`);
   }
 }

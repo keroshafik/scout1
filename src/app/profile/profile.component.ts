@@ -3,6 +3,7 @@ import { GetServiceService } from '../services/get-service.service';
 import { Users } from '../Models/Users';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { Teams } from '../Models/Teams';
 
 @Component({
   selector: 'app-profile',
@@ -12,6 +13,7 @@ import { Subscription } from 'rxjs';
 export class ProfileComponent implements OnInit {
   sub: Subscription | null = null;
   Users: Users[] | null = null;
+  public Teams: Teams[]=[];
   public notFavorite = true;
   public Price: any;
   activeSlideIndex: number[] = [];
@@ -23,11 +25,12 @@ export class ProfileComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.sub = this.router.queryParams.subscribe((data) => {
-      this.GetServiceService.getAllUsers().subscribe((data) => {
-        this.Users = data;
-        this.activeSlideIndex = new Array(this.Users.length).fill(0);
-      });
+    // this.sub = this.router.queryParams.subscribe((data) => {
+
+    // });
+    this.GetServiceService.getAllUsers("Team").subscribe((data) => {
+      this.Teams = data;
+      // this.activeSlideIndex = new Array(this.Users.length).fill(0);
     });
   }
 
