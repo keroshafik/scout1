@@ -9,13 +9,15 @@ import { RouterLink, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ProfileComponent } from './profile/profile.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
     NavBarComponent,
-    ProfileComponent
+    ProfileComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,

@@ -11,7 +11,7 @@ export class GetServiceService {
 
   constructor(private http: HttpClient) { }
 
-  getAllUsers( url:string): Observable<any[]> {
+  getAll( url:string): Observable<any[]> {
     return this.http.get<any[]>(`${this.Url}${url}`);
   }
 }

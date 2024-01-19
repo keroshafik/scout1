@@ -28,7 +28,7 @@ export class ProfileComponent implements OnInit {
     // this.sub = this.router.queryParams.subscribe((data) => {
 
     // });
-    this.GetServiceService.getAllUsers("Team").subscribe((data) => {
+    this.GetServiceService.getAll("Team").subscribe((data) => {
       this.Teams = data;
       // this.activeSlideIndex = new Array(this.Users.length).fill(0);
     });
