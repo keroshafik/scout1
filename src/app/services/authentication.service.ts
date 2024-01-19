@@ -3,6 +3,7 @@ import { Token } from '../Models/Token';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
+import { config } from '../config';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,12 +13,12 @@ export class AuthenticationService {
 
   public isAuth$ = new BehaviorSubject<Authorized>(this.authorized);
 
-  private readonly apiUrl = 'https://localhost:7080/api/Users/Login';
+  private readonly apiUrl = config.Url;
 
   constructor(public httpClient: HttpClient) {}
 
-  login(userLoginDto: any): Observable<Token> {
-    return this.httpClient.post<Token>(this.apiUrl, userLoginDto).pipe(
+  login(userLoginDto: any,api:string): Observable<Token> {
+    return this.httpClient.post<Token>(`${this.apiUrl}${api}`, userLoginDto).pipe(
       tap((Token) => {
         localStorage.setItem('token', Token.token);
         localStorage.setItem('role', Token.role);

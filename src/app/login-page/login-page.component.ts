@@ -52,7 +52,7 @@ export class LoginPageComponent {
         UserName: this.user.Username,
         Password: this.user.password,
       };
-      this.authService.login(userLoginDto).subscribe({
+      this.authService.login(userLoginDto,"user").subscribe({
         next: (response) => {
           console.log("Login successful");
           console.log(response); // Log the response object
