@@ -1,91 +1,14 @@
-<!--
-<div class="container">
-  <div class=" row  justify-content-center w-100">
-<div class="card col-lg-8 mt-5">
-  <img src="../../assets/download.jpg" class="card-img-top" style="height: auto;" alt="...">
-  <div class="card-body">
-    <h5 class="card-title offset-lg-3">Card title</h5>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">
-      <h5 class="card-title offset-1 col-lg-2">
-        price: {{Teams[0].id}}
-    </h5></li>
-    <li class="list-group-item">
-      <h5 class="card-title offset-1 col-lg-2">
-        price: {{Teams[0].id}}
-    </h5></li>
-    <li class="list-group-item">
-      <h5 class="card-title offset-1 col-lg-2">
-        price: {{Teams[0].id}}
-    </h5></li>  </ul>
-</div>
-</div> -->
-<div class="container">
-  <div class="row justify-content-center box mt-4" >
-    <div class="card" style="background-color:rgb(252, 252, 252)">
-      <div class="card-body row">
-        <img src="../../assets/download.jpg" class="card-img-top" style="height: auto;" alt="...">
-      </div>
-      <div class="cardSizes">
-        <div class="card">
-
-        </div>
-      </div>
-      <br>
-      <div class="card-body row">
-        <h5 class="card-title offset-1 col-lg-2">
-          Price: {{ Teams[0].id }}
-        </h5>
-        <h5 class="card-title offset-1 col-lg-2">
-          Area: {{ Teams[0].id }}m<sup>2</sup
-          ><i class="fa fa-area-chart ms-1" aria-hidden="true"></i>
-        </h5>
-        <h5 class="card-text offset-1 col-lg-2">
-          Rooms: {{ Teams[0].id
-          }}<i class="fa fa-bed ms-1" aria-hidden="true"></i>
-        </h5>
-        <h5 class="card-text offset-sm-1 col-lg-2 offset-lg-0">
-          Baths: {{ Teams[0].id
-          }}<i class="fa fa-bathtub ms-1" aria-hidden="true"></i>
-        </h5>
-      </div>
-      <div class="card-body row mt-1">
-        <h5 class="card-title offset-1 col-lg-2">
-          Price: {{ Teams[0].id }}
-        </h5>
-        <h5 class="card-title offset-1 col-lg-2">
-          Area: {{ Teams[0].id }}m<sup>2</sup
-          ><i class="fa fa-area-chart ms-1" aria-hidden="true"></i>
-        </h5>
-        <h5 class="card-text offset-1 col-lg-2">
-          Rooms: {{ Teams[0].id
-          }}<i class="fa fa-bed ms-1" aria-hidden="true"></i>
-        </h5>
-        <h5 class="card-text offset-sm-1 col-lg-2 offset-lg-0">
-          Baths: {{ Teams[0].id
-          }}<i class="fa fa-bathtub ms-1" aria-hidden="true"></i>
-        </h5>
-      </div>
-      <hr>
-      <div class="card-body row">
-        <h3 class="card-title ms-4">Description</h3>
-      </div>
-      <div class="card-body row">
-        <h4 class="card-title ms-3 mt-1">{{ Teams[0].id }}</h4>
-      </div>
-      <hr>
-      <div class="card-body row">
-        <h3 class="card-title ms-4">For More Info</h3>
-      </div>
-      <div class="card-body row">
-        <h5 class="card-title col-lg-3 ms-lg-5">
-          Phone: {{ Teams[0].id }} <i class="fas fa-phone"></i>
-        </h5>
-        <h5 class="card-title col-lg-3 ms-lg-2">Code: {{ Teams[0].id }}</h5>
-      </div>
-      <br>
+<div class="profile-card">
+  <div class="profile-header">
+    <img src="../../assets/download.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="profile-title">
+      <h5>{{ Teams[0].name }} {{ Teams[0].name }}</h5>
+      <p class="designation">Web Developer</p>
     </div>
-
+  </div>
+  <div class="profile-details">
+    <p><strong>Email:</strong> {{ Teams[0].name }}</p>
+    <p><strong>Address:</strong> {{ Teams[0].name }}</p>
+    <p><strong>Government:</strong> {{ Teams[0].name }}</p>
   </div>
 </div>

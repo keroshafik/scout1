@@ -25,4 +25,5 @@ export class HomePageComponent {
       // this.activeSlideIndex = new Array(this.Users.length).fill(0);
     });
   }
+
 }
